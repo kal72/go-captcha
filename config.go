@@ -4,12 +4,12 @@ import "github.com/kal72/go-captcha/driver/memorystore"
 
 type Config struct {
 	SecretKey string
-	Width     int
-	Height    int
-	Length    int
-	Expire    int
-	FontSize  float64
-	Store     Store
+	Width     int     // width image
+	Height    int     // height image
+	Length    int     // length character text
+	Expire    int     // in seconds
+	FontSize  float64 // font size
+	Store     Store   // cache
 }
 
 type Option func(*Config)
@@ -20,7 +20,7 @@ func defaultConfig(secret string) *Config {
 		Width:     200,
 		Height:    80,
 		Length:    6,
-		Expire:    60, //seconds
+		Expire:    60,
 		FontSize:  38,
 		Store:     memorystore.New(),
 	}

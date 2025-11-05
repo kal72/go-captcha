@@ -1,5 +1,23 @@
 # go captcha
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5e75b2bf-d7b7-47d6-b05a-ca059c175dc9" alt="gocaptcha logo" width="170px"/>
+</p>
+<p align="center">
+  <a href="https://pkg.go.dev/github.com/kal72/go-captcha">
+    <img src="https://pkg.go.dev/badge/github.com/kal72/go-captcha.svg" alt="Go Reference">
+  </a>
+  <a href="https://goreportcard.com/report/github.com/kal72/go-captcha">
+    <img src="https://goreportcard.com/badge/github.com/kal72/go-captcha" alt="Go Report Card">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT">
+  </a>
+  <img src="https://img.shields.io/github/v/release/kal72/go-captcha?sort=semver" alt="GitHub release (latest by date)">
+</p>
+
+
+
 > 🧩 **go captcha** is a simple, lightweight library for generating and verifying image-based CAPTCHA codes written in Go.
 
 ---
@@ -46,7 +64,7 @@ func main() {
 	fmt.Println("image: " + base64Image)
 
     // Verify
-    err = cap.Verify(text, token)
+    _, err = cap.Verify(text, token)
 	if err != nil {
 		panic("verify failed: " + err.Error())
 	} else {
@@ -124,7 +142,7 @@ examples/
 
 Run an example:
 ```bash
-go run ./examples/basic
+go run ./examples/basic/main.go
 ```
 
 ---

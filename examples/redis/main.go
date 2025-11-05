@@ -25,7 +25,7 @@ func main() {
 	fmt.Println("token: " + token)
 	fmt.Println("image: " + base64Image)
 
-	err = cap.Verify(text, token)
+	_, err = cap.Verify(text, token)
 	if err != nil {
 		panic("verify failed: " + err.Error())
 	}
